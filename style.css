@@ -48,10 +48,6 @@ body {
   margin: 0 auto;
 }
 
-section {
-  padding: 80px 0;
-}
-
 /*----------------------------------------------------*/
 /*HEADER*/
 /*----------------------------------------------------*/
@@ -122,4 +118,8 @@ header {
 .btn:active {
   background-color: rgba(255, 255, 255, 0.25);
   color: var(--white);
+}
+
+.eggs{
+  float: right;
 }
