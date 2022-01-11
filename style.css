@@ -48,7 +48,7 @@ body {
   margin: 0 auto;
 }
 
-section{
+section {
   content-visibility: auto;
 }
 
@@ -124,7 +124,19 @@ header {
   color: var(--white);
 }
 
-.eggs{
-  float: right;
-  width:50%;
+.section-eggs {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.eggs {
+  width: 50%;
+}
+
+.eggs-text {
+  width: 50%;
+}
+
+.glass {
+  float: left;
+  width: 50%;
 }
