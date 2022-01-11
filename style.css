@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  /*Primary*/
+
+  --soft_red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark_desaturated_cyan: hsl(167, 40%, 24%);
+  --dark_blue: hsl(198, 62%, 26%);
+  --dark_moderate_cyan: hsl(168, 34%, 41%);
+
+  /*Neutral*/
+
+  --very_dark_desaturated: hsl(212, 27%, 19%);
+  --very_dark_grayish: hsl(213, 9%, 39%);
+  --dark_grayish: hsl(232, 10%, 55%);
+  --grayish: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*----------------------------------------------------*/
+/*INITIALISATION DE NOTRE PAGE*/
+/*----------------------------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--white);
+  color: var(--very_dark_grayish);
+  font-family: "Barlow", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 62.5%;
+  /*CELA RENDRA LE RENDU PARFAIT DE NOS POLICES EN LECTURE*/
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.row {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*----------------------------------------------------*/
+/*HEADER*/
+/*----------------------------------------------------*/
+header {
+  background-image: url(images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 4rem 4rem 0 4rem;
+}
+
+.hero-text-box h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 8rem;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  width: 144rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  position: absolute;
+  width: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 3rem;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+.menu:link,
+.menu:visited {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn:link,
+.btn:visited {
+  background-color: var(--white);
+  color: var(--dark_blue);
+  text-transform: uppercase;
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 2rem 3rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
