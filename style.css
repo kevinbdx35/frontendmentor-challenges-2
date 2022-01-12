@@ -140,6 +140,41 @@ header {
   align-items: center;
 }
 
+.eggs-text h2 {
+  color: var(--very_dark_desaturated);
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 5rem;
+}
+
+.eggs-text p {
+  color: var(--dark_grayish);
+  width: 50ch;
+  line-height: 3rem;
+  margin-top: 5rem;
+}
+
+.eggs-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--very_dark_desaturated);
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.eggs-text a::after {
+    display: block;
+    height: 1rem;
+    background-color: var(--yellow);
+    content:"";
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -0.8rem;
+    border-radius: 50px;
+}
+
 .glass {
   float: left;
   width: 50%;
