@@ -202,14 +202,12 @@ header {
 
 /************/
 
-.align {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-end;
+.cerises {
+  float: left;
+  width: 100%;
 }
 
-.graphic-align,
-.photography-align {
-  position: absolute;
+.oranges {
+  float: right;
+  width: 100%;
 }
