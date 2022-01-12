@@ -199,3 +199,17 @@ header {
 .section-text-align-glass a::after {
   background-color: var(--soft_red);
 }
+
+/************/
+
+.align {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.graphic-align,
+.photography-align {
+  position: absolute;
+}
