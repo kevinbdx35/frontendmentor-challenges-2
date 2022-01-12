@@ -124,7 +124,7 @@ header {
   color: var(--white);
 }
 
-.section-eggs {
+.section {
   display: flex;
   flex-flow: row nowrap;
 }
@@ -132,7 +132,7 @@ header {
   width: 50%;
 }
 
-.eggs-text{
+.section-text {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -140,29 +140,29 @@ header {
   align-items: center;
 }
 
-.eggs-text-align {
+.section-text-align {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
 
-.eggs-text h2 {
+.section-text h2 {
   color: var(--very_dark_desaturated);
   font-family: "Fraunces", "Arial", sans-serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 900;
-  width:15ch;
+  width: 15.5ch;
 }
 
-.eggs-text p {
+.section-text p {
   color: var(--dark_grayish);
   width: 45ch;
   line-height: 3rem;
   margin-top: 4rem;
 }
 
-.eggs-text a {
+.section-text a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--very_dark_desaturated);
@@ -173,7 +173,7 @@ header {
   margin-top: 4rem;
 }
 
-.eggs-text a::after {
+.section-text a::after {
   display: block;
   height: 1rem;
   background-color: var(--yellow);
@@ -187,4 +187,8 @@ header {
 .glass {
   float: left;
   width: 50%;
+}
+
+.section-text-align.glass a::after {
+  background-color: var(--soft_red);
 }
