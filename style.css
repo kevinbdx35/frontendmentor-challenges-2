@@ -1,8 +1,14 @@
+/*----------------------------------------------------*/
+/*================  FONTS  ============================*/
+/*----------------------------------------------------*/
+
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
-:root {
-  /*Primary*/
+/*----------------------------------------------------*/
+/*================  VARIABLES CSS - COLORS  ============================*/
+/*----------------------------------------------------*/
 
+:root {
   --soft_red: hsl(7, 99%, 70%);
   --yellow: hsl(51, 100%, 49%);
   --dark_desaturated_cyan: hsl(167, 40%, 24%);
@@ -19,7 +25,7 @@
 }
 
 /*----------------------------------------------------*/
-/*INITIALISATION DE NOTRE PAGE*/
+/*====  INITIALISATION DE NOTRE PAGE  ================*/
 /*----------------------------------------------------*/
 *,
 *::before,
@@ -30,6 +36,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: var(--white);
   color: var(--very_dark_grayish);
   font-family: "Barlow", "Arial", sans-serif;
@@ -43,22 +50,106 @@ body {
   font-size: 1.8rem;
 }
 
-.row {
-  max-width: 144rem;
-  margin: 0 auto;
+ul {
+  list-style: none;
 }
 
-section {
-  content-visibility: auto;
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 
 /*----------------------------------------------------*/
-/*HEADER*/
+/*==========  GRID  ==================================*/
+/*----------------------------------------------------*/
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 0fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+.div2 {
+  grid-area: 2 / 1 / 3 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.div3 {
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+.div4 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.div5 {
+  grid-area: 3 / 3 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+.div6 {
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+.div7 {
+  grid-area: 4 / 3 / 5 / 5;
+}
+
+.div8 {
+  grid-area: 5 / 1 / 6 / 5;
+
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.div9 {
+  grid-area: 6 / 1 / 7 / 5;
+  background-color: #f7f7f7;
+}
+
+.div10 {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
+.div11 {
+  grid-area: 7 / 2 / 8 / 3;
+}
+
+.div12 {
+  grid-area: 7 / 3 / 8 / 4;
+}
+
+.div13 {
+  grid-area: 7 / 4 / 8 / 5;
+}
+
+.div14 {
+  grid-area: 8 / 1 / 9/ 5;
+  background-color: hsl(165, 47.06%, 73.33%);
+  width: 100%;
+}
+
+/*----------------------------------------------------*/
+/*==========  HEADER  =================================*/
 /*----------------------------------------------------*/
 header {
   background-image: url(images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   padding: 4rem 4rem 0 4rem;
 }
@@ -86,12 +177,13 @@ header {
 }
 
 .logo {
-  height: 3rem;
+  display: inline;
+  width: 15.5rem;
+  cursor: pointer;
 }
 
 .main-nav {
   float: right;
-  list-style: none;
 }
 
 .main-nav li {
@@ -102,7 +194,6 @@ header {
 
 .menu:link,
 .menu:visited {
-  text-decoration: none;
   color: var(--white);
 }
 
@@ -124,34 +215,20 @@ header {
   color: var(--white);
 }
 
-.section {
-  display: flex;
-  flex-flow: row nowrap;
-}
-.eggs {
-  float: right;
-  width: 50%;
-}
+/*----------------------------------------------------*/
+/*==========  SECTION 2  =============================*/
+/*----------------------------------------------------*/
 
-.section-text,
-.section-text-glass {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-text-align,
-.section-text-align-glass {
+.div2.center,
+.div5.center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-.section-text h2,
-.section-text-glass h2 {
+.div2 h2,
+.div5 h2 {
   color: var(--very_dark_desaturated);
   font-family: "Fraunces", "Arial", sans-serif;
   font-size: 4.5rem;
@@ -159,16 +236,16 @@ header {
   width: 15.5ch;
 }
 
-.section-text p,
-.section-text-glass p {
+.div2 p,
+.div5 p {
   color: var(--dark_grayish);
   width: 45ch;
   line-height: 3rem;
   margin-top: 4rem;
 }
 
-.section-text a,
-.section-text-glass a {
+.div2 a,
+.div5 a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--very_dark_desaturated);
@@ -179,8 +256,8 @@ header {
   margin-top: 4rem;
 }
 
-.section-text a::after,
-.section-text-glass a::after {
+.div2 a::after,
+.div5 a::after {
   display: block;
   height: 1rem;
   background-color: var(--yellow);
@@ -191,44 +268,71 @@ header {
   border-radius: 50px;
 }
 
-.glass {
-  float: left;
-  width: 50%;
-}
-
-.section-text-align-glass a::after {
+.div5 a::after {
   background-color: var(--soft_red);
 }
-
-/************/
-
-.section-testi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fafafa;
-  width: 100%;
+/*----------------------------------------------------*/
+/*==========  TEXT UNDER PICTURES  ===================*/
+/*----------------------------------------------------*/
+.div6 .under,
+.div7 .under {
+  position: relative;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.section-testi h2 {
-  font-family: "Fraunces", "Arial", sans-serif;
-  font-size: 180%;
-  color: var(--grayish);
-  word-spacing: 2px;
+
+.under {
   text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+  width: 38ch;
+  height: 0;
+}
+
+.under h2 {
+  font-family: "Fraunces", "Arial", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.under p {
+  line-height: 3rem;
+}
+
+.green {
+  color: var(--dark_desaturated_cyan);
+}
+.blue {
+  color: var(--dark_blue);
+}
+
+/*----------------------------------------------------*/
+/*==========  TESTIMONIALS  =============================*/
+/*----------------------------------------------------*/
+.div8 {
+  margin-top: 0rem;
+}
+.div8 h2 {
+  color: var(--grayish);
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-top: 15rem;
 }
 
 blockquote {
   padding: 2px;
   line-height: 145%;
   position: relative;
-  margin-top: 40px;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
 }
 
 blockquote > p {
   display: inline-block;
   width: 34ch;
+  color: var(--dark_grayish);
+  line-height: 3rem;
 }
 
 .col.span-1-of-3 {
@@ -247,13 +351,38 @@ cite {
 }
 
 cite span {
+  display: block;
   font-family: "Barlow", "Arial", sans-serif;
   color: var(--grayish);
+  font-size: 1.5rem;
 }
 
 .col img {
-  height: 75px;
+  width: 75px;
   border-radius: 50%;
-  margin-top: 100px;
+  margin-top: 5rem;
   vertical-align: middle;
+  display: inline-block;
+}
+
+/*----------------------------------------------------*/
+/*==========  FOOTER  =============================*/
+/*----------------------------------------------------*/
+footer {
+  text-align: center;
+  height: 25vh;
+}
+
+.logo-margin {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.nav-footer li {
+  display: inline;
+}
+
+.nav-footer li a {
+  color: var(--dark_moderate_cyan);
+  margin: 2rem;
 }
