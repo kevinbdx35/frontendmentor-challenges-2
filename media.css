@@ -1,151 +1,73 @@
 /*----------------------------------------------------*/
-/*================  FONTS  ============================*/
+/*================  MEDIA QUERIES  ===================*/
 /*----------------------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
-
-/*----------------------------------------------------*/
-/*================  VARIABLES CSS - COLORS  ============================*/
-/*----------------------------------------------------*/
-
-:root {
-  --soft_red: hsl(7, 99%, 70%);
-  --yellow: hsl(51, 100%, 49%);
-  --dark_desaturated_cyan: hsl(167, 40%, 24%);
-  --dark_blue: hsl(198, 62%, 26%);
-  --dark_moderate_cyan: hsl(168, 34%, 41%);
-
-  /*Neutral*/
-
-  --very_dark_desaturated: hsl(212, 27%, 19%);
-  --very_dark_grayish: hsl(213, 9%, 39%);
-  --dark_grayish: hsl(232, 10%, 55%);
-  --grayish: hsl(210, 4%, 67%);
-  --white: hsl(0, 0%, 100%);
-}
-
-/*----------------------------------------------------*/
-/*====  INITIALISATION DE NOTRE PAGE  ================*/
-/*----------------------------------------------------*/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: var(--white);
-  color: var(--very_dark_grayish);
-  font-family: "Barlow", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 62.5%;
-  /*CELA RENDRA LE RENDU PARFAIT DE NOS POLICES EN LECTURE*/
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-size: 1.8rem;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-/*----------------------------------------------------*/
-/*==========  GRID  ==================================*/
-/*----------------------------------------------------*/
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .parent {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 0fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     grid-template-areas:
-      "header header header header"
-      "text1 text1 photo1 photo1"
-      "photo2 photo2 text2 text2"
-      "photo3 photo3 photo4 photo4"
-      "testi1 testi1 testi1 testi1"
-      "testi2 testi2 testi2 testi2"
-      "photo5 photo6 photo7 photo8"
-      "footer footer footer footer";
+      "header header"
+      "photo1 photo1"
+      "text1 text1"
+      "photo2 photo2"
+      "text2 text2"
+      "photo3 photo3"
+      "photo4 photo4"
+      "testi1 testi1"
+      "testi2 testi2"
+      "photo5 photo6"
+      "photo7 photo8"
+      "footer footer";
   }
 
   .div1 {
     grid-area: header;
   }
-
   .div2 {
     grid-area: text1;
     align-self: center;
     justify-self: center;
+    margin: 10rem 0;
   }
-
   .div3 {
     grid-area: photo1;
   }
-
   .div4 {
     grid-area: photo2;
   }
-
   .div5 {
     grid-area: text2;
     align-self: center;
     justify-self: center;
+    margin: 10rem 0;
   }
-
   .div6 {
     grid-area: photo3;
   }
-
   .div7 {
     grid-area: photo4;
   }
-
   .div8 {
     grid-area: testi1;
-
     background-color: #f7f7f7;
     text-align: center;
   }
-
   .div9 {
     grid-area: testi2;
     background-color: #f7f7f7;
   }
-
   .div10 {
     grid-area: photo5;
   }
-
   .div11 {
     grid-area: photo6;
   }
-
   .div12 {
     grid-area: photo7;
   }
-
   .div13 {
     grid-area: photo8;
   }
-
   .div14 {
     grid-area: footer;
     background-color: hsl(165, 47.06%, 73.33%);
@@ -161,7 +83,6 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: auto;
     padding: 4rem 4rem 0 4rem;
   }
 
@@ -170,13 +91,15 @@ img {
     text-transform: uppercase;
     text-align: center;
     font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 8rem;
+    font-size: 6rem;
+    width: 8ch;
     letter-spacing: 0.5rem;
     position: absolute;
-    width: 144rem;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
   }
 
   .arrow {
@@ -235,7 +158,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .div2 h2,
@@ -244,13 +167,16 @@ img {
     font-family: "Fraunces", "Arial", sans-serif;
     font-size: 4.5rem;
     font-weight: 900;
-    width: 15.5ch;
+    text-align: center;
+    width: 15ch;
   }
 
   .div2 p,
   .div5 p {
     color: var(--dark_grayish);
-    width: 45ch;
+    font-size: 2rem;
+    text-align: center;
+    width: 32ch;
     line-height: 3rem;
     margin-top: 4rem;
   }
@@ -289,7 +215,7 @@ img {
   .div6 .under,
   .div7 .under {
     position: relative;
-    top: -30%;
+    top: -45%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -315,97 +241,4 @@ img {
   .blue {
     color: var(--dark_blue);
   }
-}
-
-/*----------------------------------------------------*/
-/*==========  TESTIMONIALS  =============================*/
-/*----------------------------------------------------*/
-.div8 {
-  margin-top: 0rem;
-}
-.div8 h2 {
-  color: var(--grayish);
-  font-family: "Fraunces", "Arial", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-  margin-top: 15rem;
-}
-
-blockquote {
-  padding: 2px;
-  line-height: 145%;
-  position: relative;
-  margin-top: 5rem;
-  margin-bottom: 15rem;
-}
-
-blockquote > p {
-  display: inline-block;
-  width: 34ch;
-  color: var(--dark_grayish);
-  line-height: 3rem;
-}
-
-.col.span-1-of-3 {
-  text-align: center;
-}
-
-cite {
-  font-style: inherit;
-  font-size: 90%;
-  margin-top: 25px;
-  display: block;
-  font-family: "Fraunces", "Arial", sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--very_dark_desaturated);
-}
-
-cite span {
-  display: block;
-  font-family: "Barlow", "Arial", sans-serif;
-  color: var(--grayish);
-  font-size: 1.5rem;
-}
-
-.col img {
-  width: 75px;
-  border-radius: 50%;
-  margin-top: 5rem;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/*----------------------------------------------------*/
-/*==========  FOOTER  =============================*/
-/*----------------------------------------------------*/
-footer {
-  text-align: center;
-  height: 25vh;
-}
-
-.logo-margin {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-.nav-footer li {
-  display: inline;
-}
-
-.nav-footer li a:link,
-.nav-footer li a:visited {
-  color: var(--dark_moderate_cyan);
-  margin: 2rem;
-}
-
-.nav-footer li a:hover,
-.nav-footer li a:active {
-  color: var(--white);
-}
-
-.bx {
-  margin-top: 5rem;
 }
