@@ -79,6 +79,7 @@ header {
     width:8ch;
     letter-spacing: 0.5rem;
     position: absolute;
+    width: auto;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
