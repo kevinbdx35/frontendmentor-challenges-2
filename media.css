@@ -116,39 +116,6 @@
     cursor: pointer;
   }
 
-  .main-nav {
-    float: right;
-  }
-
-  .main-nav li {
-    display: inline-block;
-    margin-left: 4rem;
-    cursor: pointer;
-  }
-
-  .menu:link,
-  .menu:visited {
-    color: var(--white);
-  }
-
-  .btn:link,
-  .btn:visited {
-    background-color: var(--white);
-    color: var(--dark_blue);
-    text-transform: uppercase;
-    font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 2rem;
-    border: none;
-    border-radius: 5rem;
-    padding: 2rem 3rem;
-  }
-
-  .btn:hover,
-  .btn:active {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: var(--white);
-  }
-
   /*----------------------------------------------------*/
   /*==========  SECTION 2  =============================*/
   /*----------------------------------------------------*/
@@ -241,4 +208,53 @@
   .blue {
     color: var(--dark_blue);
   }
+
+
+/*******/
+#btn-menu {
+  background-color: transparent;
+  font-size: 3rem;
+  border: none;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#btn-menu.active {
+  transform: translateX(-100px);
+}
+
+#nav {
+  background-color: rgba(255, 255, 255, 0.25);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#nav.active {
+  transform: translateX(0);
+}
+
+#nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+#nav ul li {
+  padding: 1rem 0;
+}
+#nav a {
+  color: var(--dark_desaturated_cyan);
+  text-decoration: none;
+}
+
+
 }
