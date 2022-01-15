@@ -1,102 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!--=============== META ===============-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free Web Project" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Kevin B." />
 
-  <!--=============== META ===============-->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free Web Project">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Kevin B.">
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
 
-<!--=============== BOXICONS ===============-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> 
+    <!--=============== CSS ===============-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="style.css" />
 
-<!--=============== CSS ===============-->
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link rel="stylesheet" href="media.css">
-<link rel="stylesheet" href="grid.css">
-<link rel="stylesheet" href="style.css">
+    <!--=============== script ===============-->
+    <script src="main.js" defer></script>
 
-<!--=============== script ===============-->
-  <script src="main.js" defer></script>
+    <!--=============== TITLE ===============-->
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
+    <!--=============== GRID PARENT ===============-->
+    <div class="grid-parent">
+      <!--=============== GRID-1 ===============-->
+      <div class="grid1">
+        <!--=============== HEADER ===============-->
+        <header>
+          <!--=============== MENU-NAV ===============-->
+          <nav>
+            <img src="images/logo.svg" alt="Logo" class="logo" />
+            <ul class="main-nav" id="nav">
+              <li><a href="#" class="menu">About</a></li>
+              <li><a href="#" class="menu">Services</a></li>
+              <li><a href="#" class="menu">Projects</a></li>
+              <li><a href="#" class="menu btn">Contact</a></li>
+            </ul>
+            <button id="btn-menu">☰</button>
+          </nav>
+          <!--=============== TEXT-HEADER ===============-->
+          <div class="hero-text-box">
+            <h1>We are creatives</h1>
+            <img src="images/icon-arrow-down.svg" alt="Arrow" class="arrow" />
+          </div>
+        </header>
+      </div>
 
-<!--=============== TITLE ===============-->  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
-</head>
-<body>
-<!--=============== GRID PARENT ===============-->  
-  <div class="grid-parent">
-<!--=============== GRID-1 ===============-->    
-    <div class="grid1">
-<!--=============== HEADER ===============-->
-      <header>
-<!--=============== MENU-NAV ===============-->
-        <nav>
-          <img src="images/logo.svg" alt="Logo" class="logo" />
-          <ul class="main-nav" id="nav">
-            <li><a href="#" class="menu">About</a></li>
-            <li><a href="#" class="menu">Services</a></li>
-            <li><a href="#" class="menu">Projects</a></li>
-            <li><a href="#" class="menu btn">Contact</a></li>
-          </ul>
-          <button id="btn-menu">☰</button>
-        </nav>
-<!--=============== TEXT-HEADER ===============--> 
-        <div class="hero-text-box">
-          <h1>We are creatives</h1>
-          <img src="images/icon-arrow-down.svg" alt="Arrow" class="arrow" />
-        </div>     
-      </header>      
-    </div>
-
-    
-<!--=============== GRID-2 ===============--> 
+      <!--=============== GRID-2 ===============-->
       <div class="grid2 center">
         <h2>Transform your brand</h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+        <p>
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
         </p>
         <a href="#">Learn more</a>
       </div>
-<!--=============== GRID-3 ===============--> 
-      <div class="grid3"><img src="images/desktop/image-transform.jpg" alt=""></div>
-<!--=============== GRID-4 ===============--> 
-      <div class="grid4"><img src="images/desktop/image-stand-out.jpg" alt=""></div>
-<!--=============== GRID-5 ===============-->       
+      <!--=============== GRID-3 ===============-->
+      <div class="grid3">
+        <img src="images/desktop/image-transform.jpg" alt="" />
+      </div>
+      <!--=============== GRID-4 ===============-->
+      <div class="grid4">
+        <img src="images/desktop/image-stand-out.jpg" alt="" />
+      </div>
+      <!--=============== GRID-5 ===============-->
       <div class="grid5 center">
         <h2>Stand out to the right audience</h2>
-        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+        <p>
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
         </p>
         <a href="#">Learn more</a>
       </div>
-<!--=============== GRID-6 ===============--> 
+      <!--=============== GRID-6 ===============-->
       <div class="grid6">
-        <img src="images/desktop/image-graphic-design.jpg" alt="">
+        <img src="images/desktop/image-graphic-design.jpg" alt="" />
         <div class="top-picture-text">
           <h2 class="green-color">Graphic design</h2>
-          <p class="green-color">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-          </p>
-        </div>       
-      </div>
-<!--=============== GRID-7 ===============-->
-      <div class="grid7">
-        <img src="images/desktop/image-photography.jpg" alt="">
-        <div class="top-picture-text">
-          <h2 class="blue-color">Photography</h2>
-          <p class="blue-color">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          <p class="green-color">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
           </p>
         </div>
       </div>
-<!--=============== GRID-8 ===============-->
+      <!--=============== GRID-7 ===============-->
+      <div class="grid7">
+        <img src="images/desktop/image-photography.jpg" alt="" />
+        <div class="top-picture-text">
+          <h2 class="blue-color">Photography</h2>
+          <p class="blue-color">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+      <!--=============== GRID-8 ===============-->
       <div class="grid8"><h2>Client testimonials</h2></div>
-<!--=============== GRID-9 ===============-->
+      <!--=============== GRID-9 ===============-->
       <div class="grid9">
         <!--FIRST TESTI-->
         <div class="col span-1-of-3">
           <img src="images/image-emily.jpg" alt="Alberto Duncan" />
           <blockquote>
-            <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+            <p>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
             </p>
             <cite>Emily R. <span>Marketing Director</span> </cite>
           </blockquote>
@@ -105,7 +128,9 @@
         <div class="col span-1-of-3">
           <img src="images/image-thomas.jpg" alt="Joana Silva" />
           <blockquote>
-            <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+            <p>
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
             </p>
             <cite>Thomas S. <span>Chief Operating Officer</span></cite>
           </blockquote>
@@ -114,41 +139,59 @@
         <div class="col span-1-of-3">
           <img src="images/image-jennie.jpg" alt="Milton Chapman" />
           <blockquote>
-            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+            <p>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
             </p>
             <cite>Jennie F. <span>Business Owner</span> </cite>
           </blockquote>
         </div>
       </div>
-<!--=============== GRID-10 ===============-->
-      <div class="grid10"><img src="images/desktop/image-gallery-milkbottles.jpg" alt=""></div>
-<!--=============== GRID-11 ===============-->
-      <div class="grid11"><img src="images/desktop/image-gallery-orange.jpg" alt=""></div>
-<!--=============== GRID-12 ===============-->
-      <div class="grid12"><img src="images/desktop/image-gallery-cone.jpg" alt=""></div>
-<!--=============== GRID-13 ===============-->
-      <div class="grid13"><img src="images/desktop/image-gallery-sugarcubes.jpg" alt=""></div>
-    
-<!--=============== GRID-14 ===============-->
-    <div class="grid14">
-<!--=============== FOOTER ===============-->
-      <footer>
-<!--=============== LOGO & MENU FOOTER ===============-->
-        <img src="images/logo-2.svg" alt="Logo" class="logo logo-margin" />
-        <ul class="nav-footer">
-          <li><a href="#" class="menu-footer">About</a></li>
-          <li><a href="#" class="menu-footer">Services</a></li>
-          <li><a href="#" class="menu-footer">Projects</a></li>
-        </ul>
-<!--=============== LOGO SOCIAL NETWORK ===============-->
-        <ul class="nav-footer">
-          <li> <a href="#"><i class='bx bxl-facebook-square'></i></a> </li>
-          <li> <a href="#"> <i class='bx bxl-instagram' ></i></a> </li>
-          <li> <a href="#"><i class='bx bxl-twitter' ></i></a> </li>
-          <li> <a href="#"><i class='bx bxl-pinterest' ></i></a> </li>
-        </ul>
-      </footer>
+      <!--=============== GRID-10 ===============-->
+      <div class="grid10">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
+      </div>
+      <!--=============== GRID-11 ===============-->
+      <div class="grid11">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="" />
+      </div>
+      <!--=============== GRID-12 ===============-->
+      <div class="grid12">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="" />
+      </div>
+      <!--=============== GRID-13 ===============-->
+      <div class="grid13">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+      </div>
+
+      <!--=============== GRID-14 ===============-->
+      <div class="grid14">
+        <!--=============== FOOTER ===============-->
+        <footer>
+          <!--=============== LOGO & MENU FOOTER ===============-->
+          <img src="images/logo-2.svg" alt="Logo" class="logo logo-margin" />
+          <ul class="nav-footer">
+            <li><a href="#" class="menu-footer">About</a></li>
+            <li><a href="#" class="menu-footer">Services</a></li>
+            <li><a href="#" class="menu-footer">Projects</a></li>
+          </ul>
+          <!--=============== LOGO SOCIAL NETWORK ===============-->
+          <ul class="nav-footer">
+            <li>
+              <a href="#"><i class="bx bxl-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxl-pinterest"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
