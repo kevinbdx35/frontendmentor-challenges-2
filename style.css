@@ -1,11 +1,11 @@
 /*----------------------------------------------------*/
-/*================  FONTS  ============================*/
+/*================  FONTS  ===========================*/
 /*----------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
 /*----------------------------------------------------*/
-/*================  VARIABLES CSS - COLORS  ============================*/
+/*=========  VARIABLES CSS - COLORS  =================*/
 /*----------------------------------------------------*/
 
 :root {
@@ -65,271 +65,289 @@ img {
 }
 
 /*----------------------------------------------------*/
-/*==========  GRID  ==================================*/
+/*================  TITLES ===========================*/
 /*----------------------------------------------------*/
-
-@media screen and (min-width: 1200px) {
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 0fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-areas:
-      "header header header header"
-      "text1 text1 photo1 photo1"
-      "photo2 photo2 text2 text2"
-      "photo3 photo3 photo4 photo4"
-      "testi1 testi1 testi1 testi1"
-      "testi2 testi2 testi2 testi2"
-      "photo5 photo6 photo7 photo8"
-      "footer footer footer footer";
-  }
-
-  .div1 {
-    grid-area: header;
-  }
-
-  .div2 {
-    grid-area: text1;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .div3 {
-    grid-area: photo1;
-  }
-
-  .div4 {
-    grid-area: photo2;
-  }
-
-  .div5 {
-    grid-area: text2;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .div6 {
-    grid-area: photo3;
-  }
-
-  .div7 {
-    grid-area: photo4;
-  }
-
-  .div8 {
-    grid-area: testi1;
-
-    background-color: #f7f7f7;
-    text-align: center;
-  }
-
-  .div9 {
-    grid-area: testi2;
-    background-color: #f7f7f7;
-  }
-
-  .div10 {
-    grid-area: photo5;
-  }
-
-  .div11 {
-    grid-area: photo6;
-  }
-
-  .div12 {
-    grid-area: photo7;
-  }
-
-  .div13 {
-    grid-area: photo8;
-  }
-
-  .div14 {
-    grid-area: footer;
-    background-color: hsl(165, 47.06%, 73.33%);
-    width: 100%;
-  }
-
-  /*----------------------------------------------------*/
-  /*==========  HEADER  =================================*/
-  /*----------------------------------------------------*/
-  header {
-    background-image: url(images/desktop/image-header.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: auto;
-    padding: 4rem 4rem 0 4rem;
-  }
-
-  .hero-text-box h1 {
-    color: var(--white);
+h1,
+h2{
     text-transform: uppercase;
-    text-align: center;
-    font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 8rem;
-    letter-spacing: 0.5rem;
-    position: absolute;
-    width: 144rem;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+}
+
+h1{
+    margin-top:0;
+    color:var(--white);
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size:180%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+/*----------------------------------------------------*/
+/*================  GRID =============================*/
+/*----------------------------------------------------*/
+.grid-parent{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 0fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+'header header header header'
+'text1 text1 photo1 photo1'
+'photo2 photo2 text2 text2' 
+'photo3 photo3 photo4 photo4' 
+'testi1 testi1 testi1 testi1'
+'testi2 testi2 testi2 testi2'
+'photo5 photo6 photo7 photo8'
+'footer footer footer footer'; 
   }
 
-  .arrow {
-    position: absolute;
-    width: 5rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-  }
 
-  .logo {
-    display: inline;
-    width: 15.5rem;
-    cursor: pointer;
-  }
+.grid1{
+  grid-area: header;
+}
 
-  .main-nav {
-    float: right;
-  }
+.grid2{
+  grid-area: text1;
+  align-self: center;
+  justify-self: center;
+}
 
-  .main-nav li {
-    display: inline-block;
-    margin-left: 4rem;
-    cursor: pointer;
-  }
+.grid3{
+  grid-area:photo1;
+}
 
-  .menu:link,
-  .menu:visited {
-    color: var(--white);
-  }
+.grid4{
+  grid-area:photo2;
+}
 
-  .btn:link,
-  .btn:visited {
-    background-color: var(--white);
-    color: var(--dark_blue);
-    text-transform: uppercase;
-    font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 2rem;
-    border: none;
-    border-radius: 5rem;
-    padding: 2rem 3rem;
-  }
+.grid5{
+  grid-area:text2;
+  align-self: center;
+  justify-self: center;
+}
 
-  .btn:hover,
-  .btn:active {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: var(--white);
-  }
+.grid6{
+  grid-area: photo3;
+}
 
-  #btn-menu{
-    display: none;
-  }
+.grid7{
+  grid-area:photo4;
+}
 
-  /*----------------------------------------------------*/
-  /*==========  SECTION 2  =============================*/
-  /*----------------------------------------------------*/
+.grid8{
+  grid-area: testi1;
+  background-color: #f7f7f7;
+  text-align: center;
+}
 
-  .div2.center,
-  .div5.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
+.grid9{
+  grid-area: testi2;
+  background-color: #f7f7f7;
+}
 
-  .div2 h2,
-  .div5 h2 {
-    color: var(--very_dark_desaturated);
-    font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 4.5rem;
-    font-weight: 900;
-    width: 15.5ch;
-  }
+.grid10{
+  grid-area:photo5;
+}
 
-  .div2 p,
-  .div5 p {
-    color: var(--dark_grayish);
-    width: 45ch;
-    line-height: 3rem;
-    margin-top: 4rem;
-  }
+.grid11{
+  grid-area:photo6;
+}
 
-  .div2 a,
-  .div5 a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--very_dark_desaturated);
-    font-family: "Fraunces", "Arial", sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    cursor: pointer;
-    margin-top: 4rem;
-  }
+.grid12{
+  grid-area:photo7;
+}
 
-  .div2 a::after,
-  .div5 a::after {
-    display: block;
-    height: 1rem;
-    background-color: var(--yellow);
-    content: "";
-    width: 100%;
-    margin: 0 auto;
-    margin-top: -0.8rem;
-    border-radius: 50px;
-  }
+.grid13{
+  grid-area:photo8;
+}
 
-  .div5 a::after {
-    background-color: var(--soft_red);
-  }
-
-  /*----------------------------------------------------*/
-  /*==========  TEXT UNDER PICTURES  ===================*/
-  /*----------------------------------------------------*/
-  .div6 .under,
-  .div7 .under {
-    position: relative;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .under {
-    text-align: center;
-    width: 38ch;
-    height: 0;
-  }
-
-  .under h2 {
-    font-family: "Fraunces", "Arial", sans-serif;
-    margin-bottom: 3rem;
-  }
-
-  .under p {
-    line-height: 3rem;
-  }
-
-  .green {
-    color: var(--dark_desaturated_cyan);
-  }
-  .blue {
-    color: var(--dark_blue);
-  }
+.grid14{
+  grid-area: footer;
+  background-color:hsl(165,47.06%,73.33%);
+  width: 100%;
 }
 
 /*----------------------------------------------------*/
-/*==========  TESTIMONIALS  =============================*/
+/*==========  HEADER  ================================*/
 /*----------------------------------------------------*/
-.div8 {
+header {
+  background-image: url(images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  padding: 4rem 4rem 0 4rem;
+}
+
+.hero-text-box h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 8rem;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  width: 144rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  position: absolute;
+  width: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  display: inline;
+  width: 15.5rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  float: right;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+.menu:link,
+.menu:visited {
+  color: var(--white);
+}
+
+.btn:link,
+.btn:visited {
+  background-color: var(--white);
+  color: var(--dark_blue);
+  text-transform: uppercase;
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 2rem 3rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+#btn-menu{
+  display: none;
+}
+
+/*----------------------------------------------------*/
+/*================  PICTURE & TEXT ===================*/
+/*----------------------------------------------------*/
+.grid2.center,
+.grid5.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.grid2 h2,
+.grid5 h2 {
+  color: var(--very_dark_desaturated);
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  width: 15.5ch;
+}
+
+.grid2 p,
+.grid5 p {
+  color: var(--dark_grayish);
+  width: 45ch;
+  line-height: 3rem;
+  margin-top: 4rem;
+}
+
+.grid2 a,
+.grid5 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--very_dark_desaturated);
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.grid2 a::after,
+.grid5 a::after {
+  display: block;
+  height: 1rem;
+  background-color: var(--yellow);
+  content: "";
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -0.8rem;
+  border-radius: 50px;
+}
+
+.grid5 a::after {
+  background-color: var(--soft_red);
+}
+/*----------------------------------------------------*/
+/*================  TEXT TOP ON PICTURE  =============*/
+/*----------------------------------------------------*/
+.grid6 .top-picture-text,
+.grid7 .top-picture-text {
+  position: relative;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.top-picture-text {
+  text-align: center;
+  width: 38ch;
+  height: 0;
+}
+
+.top-picture-text h2 {
+  font-family: "Fraunces", "Arial", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.under p {
+  line-height: 3rem;
+
+}
+
+.green-color {
+  color: var(--dark_desaturated_cyan);
+}
+.blue-color {
+  color: var(--dark_blue);
+}
+
+
+/*----------------------------------------------------*/
+/*==========  TESTIMONIALS  ==========================*/
+/*----------------------------------------------------*/
+.grid8 {
   margin-top: 0rem;
 }
-.div8 h2 {
+.grid8 h2 {
   color: var(--grayish);
   font-family: "Fraunces", "Arial", sans-serif;
   font-size: 1.8rem;
@@ -385,34 +403,148 @@ cite span {
 }
 
 /*----------------------------------------------------*/
-/*==========  FOOTER  =============================*/
+/*==========  FOOTER  ================================*/
 /*----------------------------------------------------*/
-footer {
-  text-align: center;
-  height: 300px;
+footer{
+  text-align: center;  
+  height: 300px
 }
 
-.logo-margin {
+.logo-margin{
   margin-top: 5rem;
   margin-bottom: 3rem;
+
 }
 
-.nav-footer li {
-  display: inline;
+.nav-footer li{
+  display: inline; 
+  
 }
 
 .nav-footer li a:link,
-.nav-footer li a:visited {
-  color: var(--dark_moderate_cyan);
+.nav-footer li a:visited{
+  color:var(--dark_moderate_cyan);
   margin: 2rem;
 }
 
 .nav-footer li a:hover,
-.nav-footer li a:active {
-  color: var(--white);
+.nav-footer li a:active{
+  color:var(--white);
 }
 
-.bx {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.bx{
+margin-top:5rem;
+margin-bottom: 5rem;
+}
+
+/*----------------------------------------------------*/
+/*================  MEDIA ============================*/
+/*----------------------------------------------------*/
+
+/*BIG TABLETS TO 1200px (WIDTHS SMALLER THAT 1140px ROW*/
+@media only screen and (max-width: 1200px){
+  .hero-text-box h1{
+    font-size: 4rem;
+}
+
+#btn-menu {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 3rem;
+  border: none;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#btn-menu.active {
+  transform: translateX(-100px);
+}
+
+#nav {
+  background-color: rgba(255, 255, 255, 0.25);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#nav.active {
+  transform: translateX(0);
+}
+
+#nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+#nav ul li {
+  padding: 1rem 0;
+}
+#nav a {
+  color: var(--dark_desaturated_cyan);
+  text-decoration: none;
+}
+  
+}
+
+/*SMALL TABLETS TO BIG TABLETS : FROM 768px TO 1023px*/
+@media only screen and (max-width: 1023px){
+  .grid-parent {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'photo1 photo1'
+    'text1 text1'
+    'photo2 photo2' 
+    'text2 text2'
+    'photo3 photo3' 
+    'photo4 photo4'
+    'testi1 testi1'
+    'testi2 testi2'
+    'photo5 photo6'
+    'photo7 photo8'
+    'footer footer'; 
+  } 
+
+  .div2,
+  .div5{
+    margin: 10rem 0;
+  }
+
+  .div2 h2, .div2 p, .div2 a,
+  .div5 h2, .div5 p, .div5 a{
+    text-align: center;
+  }
+
+.grid6 .top-picture-text,
+.grid7 .top-picture-text {
+  position: relative;
+  top: -45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+}
+
+
+/*SMALL PHONES TO SMALL TABLETS : FROM 481px TO 767px*/
+@media only screen and (max-width: 767px){
+  
+
+}
+
+
+/*SMALL PHONES : FROM 0 TO 480px*/
+@media only screen and (max-width: 480px){
+ 
+
 }
