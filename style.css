@@ -1,11 +1,11 @@
 /*----------------------------------------------------*/
-/*================  FONTS  ===========================*/
+/*================  FONTS  ============================*/
 /*----------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
 /*----------------------------------------------------*/
-/*=========  VARIABLES CSS - COLORS  =================*/
+/*================  VARIABLES CSS - COLORS  ============================*/
 /*----------------------------------------------------*/
 
 :root {
@@ -65,7 +65,7 @@ img {
 }
 
 /*----------------------------------------------------*/
-/*================  TITLES ===========================*/
+/*================  TITLES ============================*/
 /*----------------------------------------------------*/
 h1,
 h2{
@@ -87,8 +87,9 @@ h2{
     letter-spacing: 1px;
 }
 /*----------------------------------------------------*/
-/*================  GRID =============================*/
+/*================  GRID ============================*/
 /*----------------------------------------------------*/
+@media only screen and (min-width: 1200px){
 .grid-parent{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -173,7 +174,7 @@ h2{
 }
 
 /*----------------------------------------------------*/
-/*==========  HEADER  ================================*/
+/*==========  HEADER  =================================*/
 /*----------------------------------------------------*/
 header {
   background-image: url(images/desktop/image-header.jpg);
@@ -306,7 +307,7 @@ header {
   background-color: var(--soft_red);
 }
 /*----------------------------------------------------*/
-/*================  TEXT TOP ON PICTURE  =============*/
+/*================  TEXT TOP ON PICTURE  ==============*/
 /*----------------------------------------------------*/
 .grid6 .top-picture-text,
 .grid7 .top-picture-text {
@@ -328,7 +329,7 @@ header {
   margin-bottom: 3rem;
 }
 
-.under p {
+.top-picture-text p {
   line-height: 3rem;
 
 }
@@ -340,9 +341,10 @@ header {
   color: var(--dark_blue);
 }
 
+}
 
 /*----------------------------------------------------*/
-/*==========  TESTIMONIALS  ==========================*/
+/*==========  TESTIMONIALS  =============================*/
 /*----------------------------------------------------*/
 .grid8 {
   margin-top: 0rem;
@@ -403,7 +405,7 @@ cite span {
 }
 
 /*----------------------------------------------------*/
-/*==========  FOOTER  ================================*/
+/*==========  FOOTER  =============================*/
 /*----------------------------------------------------*/
 footer{
   text-align: center;  
@@ -435,116 +437,4 @@ footer{
 .bx{
 margin-top:5rem;
 margin-bottom: 5rem;
-}
-
-/*----------------------------------------------------*/
-/*================  MEDIA ============================*/
-/*----------------------------------------------------*/
-
-/*BIG TABLETS TO 1200px (WIDTHS SMALLER THAT 1140px ROW*/
-@media only screen and (max-width: 1200px){
-  .hero-text-box h1{
-    font-size: 4rem;
-}
-
-#btn-menu {
-  display: inline-block;
-  background-color: transparent;
-  font-size: 3rem;
-  border: none;
-  color: white;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 1rem;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-#btn-menu.active {
-  transform: translateX(-100px);
-}
-
-#nav {
-  background-color: rgba(255, 255, 255, 0.25);
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  padding: 2rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-#nav.active {
-  transform: translateX(0);
-}
-
-#nav ul {
-  padding: 0;
-  margin: 0;
-}
-
-#nav ul li {
-  padding: 1rem 0;
-}
-#nav a {
-  color: var(--dark_desaturated_cyan);
-  text-decoration: none;
-}
-  
-}
-
-/*SMALL TABLETS TO BIG TABLETS : FROM 768px TO 1023px*/
-@media only screen and (max-width: 1023px){
-  .grid-parent {
-    display: grid;
-    grid-template-areas:
-    'header header'
-    'photo1 photo1'
-    'text1 text1'
-    'photo2 photo2' 
-    'text2 text2'
-    'photo3 photo3' 
-    'photo4 photo4'
-    'testi1 testi1'
-    'testi2 testi2'
-    'photo5 photo6'
-    'photo7 photo8'
-    'footer footer'; 
-  } 
-
-  .div2,
-  .div5{
-    margin: 10rem 0;
-  }
-
-  .div2 h2, .div2 p, .div2 a,
-  .div5 h2, .div5 p, .div5 a{
-    text-align: center;
-  }
-
-.grid6 .top-picture-text,
-.grid7 .top-picture-text {
-  position: relative;
-  top: -45%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-}
-
-
-/*SMALL PHONES TO SMALL TABLETS : FROM 481px TO 767px*/
-@media only screen and (max-width: 767px){
-  
-
-}
-
-
-/*SMALL PHONES : FROM 0 TO 480px*/
-@media only screen and (max-width: 480px){
- 
-
 }
